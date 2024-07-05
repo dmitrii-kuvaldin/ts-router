@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import LoginForm from './components/LoginForm copy/LoginForm';
 import MyForm from './components/myForm/MyForm';
@@ -12,7 +12,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <>
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route path='/' element={<BrotherHood />} />
@@ -20,7 +20,7 @@ root.render(
           <Route path='login' element={<LoginForm />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </>
 );
 
